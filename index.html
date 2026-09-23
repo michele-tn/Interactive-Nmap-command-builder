@@ -23,6 +23,15 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(-
 .live-number{font-size:1.7rem;color:var(--c);display:block;font-variant-numeric:tabular-nums}
 .live-stat small{color:var(--m);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
 .live-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.builder-promo{flex:1 0 100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px;border:1px solid #397d88;border-radius:12px;background:#102e3a}
+.builder-promo .builder-kicker{display:block;margin-bottom:6px;color:#8cf0b4;font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.builder-promo h3{margin:0;font-size:1.35rem;color:#eaf3ff}.builder-promo p{margin:6px 0 0;max-width:590px;color:#bed3e1}
+.builder-cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;flex-shrink:0;min-height:54px;padding:14px 22px;border:2px solid transparent;border-radius:10px;background:#61e5f4;color:#082630;font-weight:800;box-shadow:0 6px 20px #0003;transition:background .18s,box-shadow .18s}
+.builder-cta:hover{background:#a0f3fc;text-decoration:none;box-shadow:0 8px 26px #0005}.builder-cta:focus-visible{outline:3px solid #eaf3ff;outline-offset:4px}
+html[data-theme=light] .builder-promo{background:#e5f3f6;border-color:#96bec8}
+html[data-theme=light] .builder-kicker{color:#21613a}html[data-theme=light] .builder-promo h3{color:#172b43}html[data-theme=light] .builder-promo p{color:#385568}
+html[data-theme=light] .builder-cta{background:#086578;color:#fff;box-shadow:0 6px 18px #08657824}html[data-theme=light] .builder-cta:hover{background:#064c5b}html[data-theme=light] .builder-cta:focus-visible{outline-color:#172b43}
+@media(max-width:700px){.builder-promo{flex-direction:column;align-items:stretch;gap:18px;padding:18px}.builder-cta{width:100%;padding:14px 12px;text-align:center}}
 #live-status{font-size:.84rem}.hero-card{min-width:0}
 .metric{gap:20px;align-items:center}.metric strong{text-align:right}
 @media(max-width:850px){.nav{align-items:flex-start;flex-direction:column;gap:10px;padding-top:14px;padding-bottom:14px}.navlinks{width:100%;flex-wrap:wrap}.navlinks a{display:inline-flex}html{scroll-padding-top:150px}.navlinks #theme{margin-left:auto}}
@@ -34,10 +43,11 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(-
 <header class="top"><div class="wrap nav"><div class="brand">NMAP <i>COMMAND BUILDERS</i></div><nav class="navlinks"><a href="#comparison">Comparison</a><a href="#catalog">Catalog</a><a href="#sources">Sources</a><button id="theme">Theme</button></nav></div></header>
 <main class="wrap">
 <section class="card live-catalog" aria-label="Live official Nmap catalog">
-<div class="live-copy"><span class="tag good">Official Nmap sources</span><h2>Always connected to the reference.</h2><p id="live-status" role="status">Loading the bundled catalog…</p><div class="live-actions"><button id="live-refresh" type="button">Check now</button><a href="nmap-command-lab.html">Open command builder ↗</a></div></div>
+<div class="live-copy"><span class="tag good">Official Nmap sources</span><h2>Always connected to the reference.</h2><p id="live-status" role="status">Loading the bundled catalog…</p><div class="live-actions"><button id="live-refresh" type="button">Check now</button></div></div>
 <div class="live-stat"><strong class="live-number" id="live-version">—</strong><small>Catalog version</small></div>
 <div class="live-stat"><strong class="live-number" id="live-options">—</strong><small>Options</small></div>
 <div class="live-stat"><strong class="live-number" id="live-scripts">—</strong><small>NSE scripts</small></div>
+<div class="builder-promo"><div><span class="builder-kicker">Explore the interactive tool</span><h3>Nmap Command Lab</h3><p>Build your command step by step, explore official options and copy it for Bash or PowerShell. Runs in your browser; does not execute scans.</p></div><a class="builder-cta" href="nmap-command-lab.html">Open Command Builder <span aria-hidden="true">→</span></a></div>
 <p>Automatically checked every hour while this page is open. Updates include documented flags, argument placeholders and NSE names/categories. The comparison below is an editorial snapshot.</p>
 </section>
 <section class="hero"><div><div class="eyebrow">Comparative research · 22 September 2026</div><h1>From flag pickers to reliable Nmap assistants.</h1><p>This report compares Nmap command builders, guided generators, local GUIs and execution dashboards. The key criterion is whether a tool produces understandable, compatible, repeatable and appropriately scoped commands.</p><div class="callout"><strong>Executive conclusion:</strong> Nmap Command Lab is strongest as a teaching-oriented, local-first command composer. Its differentiators are guided configuration, source traceability, shell output and explicit validation. “Best tool” claims should be replaced by reproducible scores and a stated scope.</div></div><aside class="card"><div class="metric"><span>Tools reviewed</span><strong>9</strong></div><div class="metric"><span>Categories</span><strong>3</strong></div><div class="metric"><span>Primary focus</span><strong>Command generation</strong></div><div class="metric"><span>Architecture</span><strong>Local-first</strong></div></aside></section>
